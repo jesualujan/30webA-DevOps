@@ -17,7 +17,7 @@ COPY package.json ./
 #instalar
 RUN npm install
 
-#Coppia todos los archivos y directorios desde el directorio de construcción local (localhost)
+#Copia todos los archivos y directorios desde el directorio de construcción local (localhost)
 #al directorio de trabajo en el contenedor
 COPY . ./
 
@@ -26,4 +26,5 @@ EXPOSE 3000
 
 #Establecemos el comando predeterminado a ejecutar cuando
 #iniciemos el contenedor o arranquemos el contenedor 
-CMD ["node", "index.js"]
+# CMD ["node", "index.js"]
+CMD ["npm", "run", "dev"]
